@@ -1,4 +1,4 @@
-[package]
+﻿[package]
 name = "oneclient_app"
 description = "OneClient Freya App"
 version = { workspace = true }
@@ -96,11 +96,11 @@ windows = { version = "=0.62.2", features = [
 winresource = "=0.1.31"
 
 [package.metadata.packager]
-product-name = "OneClient"
+product-name = "Pulsar"
 identifier = "org.polyfrost.OneClient"
 category = "Game"
 publisher = "Polyfrost Inc."
-copyright = "© 2026 Polyfrost Inc."
+copyright = "Â© 2026 Polyfrost Inc."
 homepage = "https://polyfrost.org/projects/oneclient"
 long-description = "Next-generation open source Minecraft launcher"
 formats = ["nsis", "app", "dmg", "deb", "appimage"]
