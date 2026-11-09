@@ -134,7 +134,7 @@ impl Default for LauncherSettings {
             dynamic_background_enabled: true,
             start_maximized: false,
             animations_enabled: true,
-            theme: "dark".to_string(),
+            theme: "pulsar".to_string(),
             accent_color: None,
             language: None,
             view_states: BTreeMap::new(),

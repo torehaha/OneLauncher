@@ -22,7 +22,7 @@ const PIXEL_BOOST_MAX: f32 = 2.5;
 const PIXEL_BOOST_END: f32 = 17.;
 const PIXEL_BOOST_RANGE: f32 = 8.;
 
-const BUILTIN_THEMES: [&str; 5] = ["dark", "light", "mystbloom", "minecraft-dark", "minecraft-light"];
+const BUILTIN_THEMES: [&str; 9] = ["pulsar", "dark", "light", "mystbloom", "nebula", "supernova", "void", "minecraft-dark", "minecraft-light"];
 
 thread_local! {
     static THEMES: RefCell<Vec<Rc<Theme>>> =
@@ -318,25 +318,16 @@ pub fn pixel_icon_size(size: f32, cells: f32) -> f32 {
     (size * scale / cells).round().max(1.) * cells / scale
 }
 
-pub fn wordmark(width: f32, height: f32, color: Color) -> Element {
-    if colors::active_theme().pixel_icons {
-        return label()
-            .text("PULSAR")
-            .font_family(font())
-            .font_weight(FontWeight::BOLD)
-            .font_size(text_size(height * 0.83))
-            .color(color)
-            .into_element();
-    }
-    SvgViewer::new((
-        "logo.svg",
-        AppAssets::get_bytes("logo.svg").unwrap_or_default(),
-    ))
-    .show_loader(false)
-    .width(Size::px(width))
-    .height(Size::px(height))
-    .color(color)
-    .into_element()
+pub fn wordmark(_width: f32, height: f32, color: Color) -> Element {
+    // Rendered as theme-colored text so it adapts to every theme (incl. pixel
+    // fonts) and tints correctly, instead of a baked image.
+    label()
+        .text("PULSAR")
+        .font_family(font())
+        .font_weight(FontWeight::BOLD)
+        .font_size(text_size(height * 0.62))
+        .color(color)
+        .into_element()
 }
 
 pub fn rounded_px(radius: f32) -> f32 {

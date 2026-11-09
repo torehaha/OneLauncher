@@ -92,12 +92,7 @@ fn navbar_left(show_logo: bool, over_art: bool) -> impl IntoElement {
         .maybe(!show_logo, |el| {
             el.padding(Gaps::new(0., NAV_LINK_SPACING_PX, 0., 0.))
         })
-        .child(
-            Icon::new(IconType::IconLogo)
-                .size(COMPACT_LOGO_PX)
-                .color(primary_color(over_art))
-                .into_element(),
-        )
+        .child(LogoMark { over_art }.into_element())
         .maybe(show_logo, |rect| {
             rect.child(NavbarLogo { over_art }.into_element())
         })
@@ -118,6 +113,32 @@ fn secondary_color(over_art: bool) -> Color {
         theme::colors::fg_secondary_pressed()
     } else {
         theme::colors::fg_secondary()
+    }
+}
+
+#[derive(PartialEq)]
+struct LogoMark {
+    over_art: bool,
+}
+
+impl Component for LogoMark {
+    fn render(&self) -> impl IntoElement {
+        // Signature "pulsar" pulse: a slow breathing glow on the logo mark.
+        let pulse = use_animation(|conf| {
+            conf.on_creation(OnCreation::Run);
+            conf.on_finish(OnFinish::reverse());
+            AnimNum::new(0.5, 1.0)
+                .time(1100)
+                .ease(Ease::InOut)
+                .function(Function::Sine)
+        });
+        let opacity = pulse.read().value();
+        rect().opacity(opacity).child(
+            Icon::new(IconType::IconLogo)
+                .size(COMPACT_LOGO_PX)
+                .color(primary_color(self.over_art))
+                .into_element(),
+        )
     }
 }
 

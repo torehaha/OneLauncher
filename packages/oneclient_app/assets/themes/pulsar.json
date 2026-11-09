@@ -1,0 +1,14 @@
+{
+  "name": "Pulsar Dark",
+  "colors": {
+    "light": false,
+    "page": "#090D18",
+    "page_elevated": "#0E1424",
+    "card": "#131B2E",
+    "component": "#131B2E",
+    "border": "#28D7E61F",
+    "text": "#DCE6FF",
+    "text_secondary": "#78859F",
+    "accent": "#28D7E6"
+  }
+}

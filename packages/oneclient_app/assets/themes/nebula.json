@@ -1,0 +1,14 @@
+{
+  "name": "Nebula",
+  "colors": {
+    "light": false,
+    "page": "#110A1E",
+    "page_elevated": "#190F2E",
+    "card": "#20163E",
+    "component": "#20163E",
+    "border": "#B96BFF1F",
+    "text": "#E9DEFF",
+    "text_secondary": "#8C7BAC",
+    "accent": "#A855F7"
+  }
+}

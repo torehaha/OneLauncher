@@ -1,0 +1,14 @@
+{
+  "name": "Void",
+  "colors": {
+    "light": false,
+    "page": "#000000",
+    "page_elevated": "#070709",
+    "card": "#0D0D10",
+    "component": "#0D0D10",
+    "border": "#FFFFFF14",
+    "text": "#ECECEC",
+    "text_secondary": "#777A80",
+    "accent": "#3FD3C0"
+  }
+}

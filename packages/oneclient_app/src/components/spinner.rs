@@ -28,9 +28,9 @@ impl Component for Spinner {
         });
 
         rect().rotate(spin.get().value()).child(
-            Icon::new(IconType::Loading02)
+            Icon::new(IconType::IconLogo)
                 .size(self.size)
-                .color(colors::fg_secondary()),
+                .color(colors::brand()),
         )
     }
 }

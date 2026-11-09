@@ -1,0 +1,14 @@
+{
+  "name": "Supernova",
+  "colors": {
+    "light": false,
+    "page": "#150A08",
+    "page_elevated": "#20100C",
+    "card": "#2A1712",
+    "component": "#2A1712",
+    "border": "#FB5A2D1F",
+    "text": "#FFE6D8",
+    "text_secondary": "#AC877B",
+    "accent": "#FB5A2D"
+  }
+}

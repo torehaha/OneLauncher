@@ -293,7 +293,7 @@ impl Component for ThemeCard {
                                 .any(|dark| system_aware(&selected, dark) == id);
                             match delete_theme(&id).await {
                                 Ok(()) if in_use => dispatch
-                                    .edit_settings(|settings| settings.theme = "dark".into()),
+                                    .edit_settings(|settings| settings.theme = "pulsar".into()),
                                 Ok(()) => {}
                                 Err(err) => notify_failure(
                                     &dispatch,
