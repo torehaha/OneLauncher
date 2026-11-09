@@ -1,4 +1,4 @@
-﻿[package]
+[package]
 name = "oneclient_app"
 description = "OneClient Freya App"
 version = { workspace = true }
