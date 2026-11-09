@@ -5,7 +5,7 @@ fn main() {
         res.set_icon("icons/icon.ico");
 
         let version = env!("CARGO_PKG_VERSION");
-        res.set("CompanyName", "Polyfrost Inc.");
+        res.set("CompanyName", "Pulsar");
         res.set("ProductName", "Pulsar");
         res.set("FileDescription", "Pulsar");
         res.set("LegalCopyright", "© 2026 Polyfrost Inc.");

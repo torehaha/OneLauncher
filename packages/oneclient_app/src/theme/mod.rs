@@ -22,7 +22,7 @@ const PIXEL_BOOST_MAX: f32 = 2.5;
 const PIXEL_BOOST_END: f32 = 17.;
 const PIXEL_BOOST_RANGE: f32 = 8.;
 
-const BUILTIN_THEMES: [&str; 4] = ["dark", "light", "minecraft-dark", "minecraft-light"];
+const BUILTIN_THEMES: [&str; 5] = ["dark", "light", "mystbloom", "minecraft-dark", "minecraft-light"];
 
 thread_local! {
     static THEMES: RefCell<Vec<Rc<Theme>>> =
@@ -321,7 +321,7 @@ pub fn pixel_icon_size(size: f32, cells: f32) -> f32 {
 pub fn wordmark(width: f32, height: f32, color: Color) -> Element {
     if colors::active_theme().pixel_icons {
         return label()
-            .text("ONECLIENT")
+            .text("PULSAR")
             .font_family(font())
             .font_weight(FontWeight::BOLD)
             .font_size(text_size(height * 0.83))

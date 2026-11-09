@@ -26,7 +26,7 @@ const MODEL_CENTER_Y: f32 = 16.;
 const DRAG_SENSITIVITY: f32 = 0.01;
 const PITCH_LIMIT: f32 = 1.3;
 // Every animated frame repaints the whole window, so cosmetics animate slower than the display.
-const ANIMATION_FRAME: Duration = Duration::from_millis(33);
+const ANIMATION_FRAME: Duration = Duration::from_millis(8);
 const EMOTE_PAUSE: f32 = 1.;
 
 #[derive(PartialEq, Clone)]

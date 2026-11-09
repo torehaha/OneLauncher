@@ -1,0 +1,14 @@
+{
+  "name": "Mystbloom",
+  "colors": {
+    "light": true,
+    "page": "#F7EAF2",
+    "page_elevated": "#FCF3F8",
+    "card": "#FFFFFF",
+    "component": "#F5E4EE",
+    "border": "#C56FA52E",
+    "text": "#3E2A36",
+    "text_secondary": "#9A7B89",
+    "accent": "#DE5BA4"
+  }
+}

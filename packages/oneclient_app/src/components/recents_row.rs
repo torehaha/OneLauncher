@@ -36,7 +36,7 @@ const MODPACK_TITLE_INSET: f32 = 8.0;
 const MODPACK_TITLE_LEFT: f32 = 10.5;
 const MARQUEE_DELAY: Duration = Duration::from_millis(200);
 const MARQUEE_HOLD: Duration = Duration::from_millis(700);
-const MARQUEE_FRAME: Duration = Duration::from_millis(16);
+const MARQUEE_FRAME: Duration = Duration::from_millis(8);
 const MARQUEE_SPEED_PX_PER_SEC: f32 = 60.0;
 const MARQUEE_TRACK_PX: f32 = 4096.0;
 
